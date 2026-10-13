@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Heebo } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/NavBar";
+import Footer from "../components/Footer";
+
 
 const heebo = Heebo({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-heebo",
 });
-
-import Navbar from "../components/NavBar";
 
 
 const geistSans = Geist({
@@ -32,14 +33,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${heebo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#FFF8F5]">
         <Navbar />
-        <main className="w-full max-w-6xl mx-auto">
-          <div className="pt-20 pb-10">
+
+        <main className=" pt-20 pb-20 ">
+          <div className="flex-1 w-full max-w-6xl mx-auto">
             {children}
           </div>
         </main>
-      </body>
+
+        <div className="flex-1">
+          <Footer />
+        </div>
+
+      </body> 
     </html>
   );
 }
