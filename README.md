@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chelsea Zebaze — Portfolio
 
-## Getting Started
+My personal portfolio site, showcasing my work as a full-stack software engineer. It includes case studies of my projects, my background, and my resume.
 
-First, run the development server:
+**Live site:** [zebaze-portfolio.vercel.app](https://zebaze-portfolio.vercel.app) <!-- update with your final URL -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Featured Projects
+
+- **PrepForward:** an adaptive SAT learning platform with an OCR/ETL pipeline for 500+ questions, a layered PostgreSQL warehouse, and analytics that personalize practice. Built with Next.js, FastAPI, PostgreSQL (Supabase), Apache Airflow, and Cloudinary.
+- **MapsModes:** a city-scale mobility analytics platform that scores walkability, bikeability, and transit access across Cleveland. I led the 7-factor Bike Score model. Built with Python, GeoPandas, FastAPI, AWS Lambda, React, and Mapbox GL JS.
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4 with a custom theme
+- **Fonts:** Heebo via `next/font`
+- **Icons:** CoreUI Icons, Lucide React
+- **Images:** `next/image`
+- **Hosting:** Vercel
+
+## Pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Introduction, resume download, and project previews |
+| `/about` | My background, strengths, and interests |
+| `/projects/prepforward` | PrepForward case study |
+| `/projects/mapsmodes` | MapsModes case study |
+
+## Project Structure
+
+```
+├── app/            # Routes, layouts, and global styles
+├── components/     # Reusable UI components (Navbar, Footer, CircularImage, ...)
+├── public/         # Images, project screenshots, and resume PDF
+└── utils/          # Shared data and helpers
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires Node.js 20 or later.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/Chelsea3219/zebaze-portfolio.git
+cd zebaze-portfolio
+npm install
+npm run dev
+```
 
-## Learn More
+Then open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+To create a production build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The site deploys automatically to Vercel on every push to `main`. No environment variables are required.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email:** [chelseadonchi@gmail.com](mailto:chelseadonchi@gmail.com)
+- **LinkedIn:** [linkedin.com/in/chelsea-zebaze](https://www.linkedin.com/in/chelsea-zebaze/)
+- **GitHub:** [github.com/Chelsea3219](https://github.com/Chelsea3219)
